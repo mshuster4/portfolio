@@ -1,0 +1,51 @@
+button.btn.btn-outline-default.Ripple-parent.nav-button {
+    border-color: #fff!important;
+    color: #3c9!important;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.nav-button-content {
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 568px ) {
+
+    .button-container {
+        height: 40%;
+    }
+}
+
+@media only screen and (min-width: 768px ) {
+
+    .button-container {
+        height: 45%;
+    }
+
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) { 
+
+    .button-container {
+        height: 60%;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .button-container {
+        height: 55%;
+    }
+
+
+} 
+
+
+

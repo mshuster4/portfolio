@@ -1,12 +1,22 @@
 import React from "react";
-import Container from "../components/Container";
+import Container from 'react-bootstrap/Container'
+import BackgroundImage from "../components/BackgroundImage";
+import CallToAction from "../components/CallToAction";
+import Header from "../components/Header"
+import NavButton from "../components/NavButton"
 
 function Landing() {
         return (
-           <Container>
-                <h1>My name is <span className="accent-color">Marguerite Shuster</span>.</h1>
-                <h1>I am a <span className="accent-color">Web Developer</span> and <span className="accent-color"> UI Designer</span></h1>
-           </Container>
+          <div className="landing-page">
+            <Container className="landing-container">
+                <BackgroundImage>
+                  <CallToAction>
+                    <Header/>
+                    <NavButton/>
+                  </CallToAction>
+                </BackgroundImage>
+            </Container>
+          </div>
         );
 }
 

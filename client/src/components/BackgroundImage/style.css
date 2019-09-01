@@ -1,0 +1,34 @@
+.background-img {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+@media only screen and (min-width : 320px) {
+    .background-img {
+        background-size: contain;
+    }
+}
+
+@media only screen and (min-width: 568px ) {
+    .background-img {
+        background-position: bottom right;
+    }
+}
+
+@media only screen and (min-width: 768px ) {
+    .background-img {
+        background-size: cover;
+    }
+}
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+   .background-img {
+       background-size: auto;
+   }
+}

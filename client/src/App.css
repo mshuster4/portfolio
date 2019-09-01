@@ -1,3 +1,31 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%; 
+}
+
+.landing-page {
+  background-color: black;
+}
+
+.landing-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
 .accent-color{
   color: #31cb97;
 }
+
+@media only screen and (min-width: 992px) {
+
+  .landing-container {
+      display: block;
+  }
+
+} 
