@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "private":true,
   "description": "professional-portfolio",
   "main": "index.js",
   "scripts": {
@@ -11,6 +12,7 @@
   "dependencies": {
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
+    "heroku-ssl-redirect": "0.0.4",
     "path": "^0.12.7"
   }
 }
