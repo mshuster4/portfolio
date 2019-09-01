@@ -1,15 +1,22 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "private":true,
+  "private": true,
   "description": "professional-portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "client-install": "npm install --prefix client", 
+    "server": "nodemon index.js",    
+    "client": "npm start --prefix client",    
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.2",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "heroku-ssl-redirect": "0.0.4",
