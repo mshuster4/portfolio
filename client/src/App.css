@@ -10,6 +10,10 @@ html, body {
   background-color: black;
 }
 
+.portfolio-page {
+  background-color: white;
+}
+
 .landing-container {
   height: 100vh;
   display: flex;
@@ -17,6 +21,15 @@ html, body {
   text-align: center;
   color: white;
 }
+
+.portfolio-container {
+  max-width: 83%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .accent-color{
   color: #31cb97;

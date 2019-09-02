@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import Container from 'react-bootstrap/Container'
 import BackgroundImage from "../components/BackgroundImage";
 import CallToAction from "../components/CallToAction";
 import Header from "../components/Header"
 import NavButton from "../components/NavButton"
 
-function Landing() {
+class Landing extends Component {
+    render() {
         return (
           <div className="landing-page">
             <Container className="landing-container">
@@ -18,6 +19,7 @@ function Landing() {
             </Container>
           </div>
         );
+    }
 }
 
 

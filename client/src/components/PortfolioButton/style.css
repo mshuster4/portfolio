@@ -1,0 +1,10 @@
+button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
+    background: none;
+    font-size: 1rem;
+}
+
+button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button:hover {
+    background-color: white;
+    color: #31cb97;
+    font-size: 1rem;
+}
