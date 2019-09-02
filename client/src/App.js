@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About"
+import Contact from "./pages/Contact"
 import ModalPage from "./pages/ModalPage";
 import blockScreenOne from "./assets/block-party-shot-one.png";
 import blockScreenTwo from "./assets/block-party-shot-two.png";
@@ -187,6 +188,7 @@ class App extends Component {
            toggle={(num) => this.toggle(num)}
         />
         <About/>
+        <Contact/>
         <div>
           <ModalPage
             show={this.state.modal}

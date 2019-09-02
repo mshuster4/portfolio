@@ -51,7 +51,7 @@ class About extends Component {
                             href={Resume}
                             target="_blank"
                             outline={true}
-                            className="about-button ml-0 mr-0"
+                            className="about-button ml-0 mr-2"
                             color="black"
                           >
                             View Resume

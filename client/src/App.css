@@ -19,6 +19,14 @@ html, body {
   background-color: rgb(243,243,243);
 }
 
+.contact-page {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .landing-container {
   height: 100vh;
   display: flex;
@@ -36,10 +44,15 @@ html, body {
 }
 
 .about-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+}
+
+.contact-container {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .modal-backdrop.show {
