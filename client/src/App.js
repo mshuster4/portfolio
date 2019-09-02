@@ -108,15 +108,15 @@ class App extends Component {
 
   connecToServer() {    
     fetch('/')
-    .then(
-      this.setState({
-        loading: false
-      })
-    );  
   }
 
-  componentDidMount() {    
-    this.connecToServer();  
+  componentDidMount() {
+    const delay = 3000;
+    this.connecToServer(); 
+    setTimeout(() => 
+    this.setState({
+      loading: false
+    }),  delay)
   }
 
   toggle = (num) => {
