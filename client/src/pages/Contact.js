@@ -38,7 +38,7 @@ class Contact extends Component {
         console.log(isValid)
           axios({
               method: "POST", 
-              url:"http://localhost:5000/send", 
+              url:"/send", 
               data: {
                   name: name,   
                   email: email,  
