@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Element } from 'react-scroll'
+import LoadSpinner from "./components/LoadSpinner";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
@@ -48,6 +49,7 @@ class App extends Component {
     super(props);    
     this.state = {
       modal: false,
+      loading: true,
       title: "",
       tagline: "",
       description: "",
@@ -105,7 +107,12 @@ class App extends Component {
 }
 
   connecToServer() {    
-    fetch('/');  
+    fetch('/')
+    .then(
+      this.setState({
+        loading: false
+      })
+    );  
   }
 
   componentDidMount() {    
@@ -220,6 +227,8 @@ class App extends Component {
 
 
   render() {
+
+    if (this.state.loading) return <LoadSpinner />;
 
     return (
       <div>
