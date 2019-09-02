@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
+import About from "./pages/About"
 import ModalPage from "./pages/ModalPage";
 import blockScreenOne from "./assets/block-party-shot-one.png";
 import blockScreenTwo from "./assets/block-party-shot-two.png";
@@ -185,6 +186,7 @@ class App extends Component {
         <Portfolio
            toggle={(num) => this.toggle(num)}
         />
+        <About/>
         <div>
           <ModalPage
             show={this.state.modal}

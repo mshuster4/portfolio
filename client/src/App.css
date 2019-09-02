@@ -2,6 +2,7 @@ html, body {
   height: 100%;
 }
 
+
 #root {
   height: 100%; 
 }
@@ -12,6 +13,10 @@ html, body {
 
 .portfolio-page {
   background-color: white;
+}
+
+.about-page {
+  background-color: rgb(243,243,243);
 }
 
 .landing-container {
@@ -28,6 +33,13 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .modal-backdrop.show {
@@ -59,6 +71,15 @@ a.btn-outline-black.btn.Ripple-parent.modal-link.btn-md {
 .accent-color{
   color: #31cb97;
 }
+
+.card-header {
+  text-align: center;
+  color: white;
+  background-color: #31cb97;
+  font-size: 1.5rem;
+  border: 0; 
+}
+
 
 @media only screen and (min-width: 768px) {
 
