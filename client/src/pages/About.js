@@ -5,6 +5,7 @@ import TextBlock from "../components/TextBlock";
 import AboutImage from "../components/AboutImage";
 import SkillsList from "../components/SkillsList";
 import Resume from "../assets/Marguerite-Shuster-Resume.pdf";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 

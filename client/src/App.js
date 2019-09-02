@@ -67,7 +67,6 @@ class App extends Component {
     this.toggle.bind(this);
     this.onCloseModal.bind(this);
     this.handleSetActive.bind(this)
-    this.connecToServer = this.connecToServer.bind(this);  
   }
 
   handleSetActive = (to) => {
@@ -106,17 +105,18 @@ class App extends Component {
   }
 }
 
-  connecToServer() {    
-    fetch('/')
-  }
-
   componentDidMount() {
-    const delay = 3000;
-    this.connecToServer(); 
-    setTimeout(() => 
-    this.setState({
-      loading: false
-    }),  delay)
+    fetch('/')
+    .then(response => {
+      setTimeout(() => {
+        this.setState({
+          loading: false
+        })
+      }, 3000);
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
   toggle = (num) => {
@@ -228,7 +228,13 @@ class App extends Component {
 
   render() {
 
-    if (this.state.loading) return <LoadSpinner />;
+    if (this.state.loading) 
+    
+    {
+      return <LoadSpinner />
+    }
+
+    else {
 
     return (
       <div>
@@ -270,6 +276,7 @@ class App extends Component {
         </div>
       </div>
     );
+    }
   }
 }
 

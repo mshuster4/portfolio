@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ScrollAnimation from 'react-animate-on-scroll';
 import { Container, Row, Col } from "react-bootstrap"
 import PortfolioButton from "../components/PortfolioButton";
 import ProjectTitle from "../components/ProjectTitle";
@@ -26,6 +27,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio-page">
+       <ScrollAnimation animateIn="fadeIn">
         <Container className="portfolio-container mt-4 mb-4 mt-lg-0 mb--0">
           <Row>
             <Col xs={12} md={6} lg={4} className="mb-4">
@@ -105,6 +107,7 @@ class Portfolio extends Component {
           </Row>
 
         </Container>
+        </ScrollAnimation>
       </div>
       );
    }

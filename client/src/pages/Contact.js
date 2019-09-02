@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "../components/Form";
 import Footer from "../components/Footer"
 import { Container, Row, Col } from "react-bootstrap";
+import ScrollAnimation from 'react-animate-on-scroll';
 import axios from 'axios';
 import * as EmailValidator from 'email-validator';
 
@@ -73,6 +74,7 @@ class Contact extends Component {
     render() {
       return(
         <div className="contact-page">
+         <ScrollAnimation animateIn="fadeIn">        
           <Container className="contact-container">
            <Row>
             <Col sm={12} className="mt-3">
@@ -95,6 +97,7 @@ class Contact extends Component {
               </Col>
             </Row>
           </Container>
+          </ScrollAnimation>
           <Footer/>
         </div>
         );
