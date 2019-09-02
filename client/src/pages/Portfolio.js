@@ -13,6 +13,17 @@ import mongoPreview from "../assets//mongo-preview.png";
 
 class Portfolio extends Component {
 
+  constructor(props) {
+    super(props);
+      console.log(this.props);
+      this.handleClick.bind(this)
+  }
+
+  handleClick(num) {
+    this.props.toggle(num);
+  }
+
+
   render() {
     return (
       <div className="portfolio-page">
@@ -24,7 +35,9 @@ class Portfolio extends Component {
                 alt="Block Party Preview"
               >
                 <ProjectTitle>Block Party</ProjectTitle>
-                <PortfolioButton/>
+                <PortfolioButton
+                   onClick = {() => this.handleClick(0)}
+                />
               </PortfolioImage>
             </Col>
 
@@ -34,7 +47,9 @@ class Portfolio extends Component {
                 alt="Reading Wishlist Preview"
               >
                 <ProjectTitle>Reading Wishlist</ProjectTitle>
-                <PortfolioButton/>
+                <PortfolioButton
+                  onClick = {() => this.handleClick(1)}
+                />
                </PortfolioImage>
             </Col>
 
@@ -44,7 +59,9 @@ class Portfolio extends Component {
                 alt="Friend Finder Preview"
                >
                 <ProjectTitle>Friend Finder</ProjectTitle>
-                <PortfolioButton/>
+                <PortfolioButton
+                  onClick = {() => this.handleClick(2)}
+                />
               </PortfolioImage>
             </Col>
 
@@ -54,7 +71,9 @@ class Portfolio extends Component {
                 alt="Camp Wanna Preview"
               >
                 <ProjectTitle>Camp Wannagetajob</ProjectTitle>
-               <PortfolioButton/>
+               <PortfolioButton
+                 onClick = {() => this.handleClick(3)}
+               />
               </PortfolioImage>
             </Col>
 
@@ -66,7 +85,9 @@ class Portfolio extends Component {
                 <ProjectTitle>
                   Brews <span>&amp;</span> Beats
                 </ProjectTitle>
-               <PortfolioButton/>
+               <PortfolioButton
+                 onClick = {() => this.handleClick(4)}
+               />
               </PortfolioImage>
             </Col>
 
@@ -76,7 +97,9 @@ class Portfolio extends Component {
                 alt="News Scraper Preview"
               >
                 <ProjectTitle>News Scraper</ProjectTitle>
-               <PortfolioButton/>
+               <PortfolioButton
+                 onClick = {() => this.handleClick(5)}
+               />
               </PortfolioImage>
             </Col>
 

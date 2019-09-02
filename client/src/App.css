@@ -30,9 +30,42 @@ html, body {
   justify-content: center;
 }
 
+.modal-backdrop.show {
+  opacity: 0.95;
+  height: 100%;
+}
+
+.modal.fade.top.show {
+  padding-top: 4rem; 
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-tag {
+  margin-bottom: 0;
+}
+
+
+a.btn-outline-black.btn.Ripple-parent.modal-link.btn-md {
+    padding: 10px 17px;
+}
 
 .accent-color{
   color: #31cb97;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .modal.fade.top.show {
+      padding-top: 2rem; 
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
