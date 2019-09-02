@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Element } from 'react-scroll'
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
@@ -18,6 +19,8 @@ import brewsScreenOne from "./assets/brews-shot-one.png";
 import brewsScreenTwo from "./assets/brews-shot-two.png";
 import mongoScreenOne from "./assets/mongo-shot-one.png";
 import mongoScreenTwo from "./assets/mongo-shot-two.png";
+import logoOne from "./assets/ms-logo-light.png";
+import logoTwo from "./assets/ms-logo-dark.png";
 import projects from "./projects.json";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -61,8 +64,45 @@ class App extends Component {
     }
     this.toggle.bind(this);
     this.onCloseModal.bind(this);
+    this.handleSetActive.bind(this)
     this.connecToServer = this.connecToServer.bind(this);  
   }
+
+  handleSetActive = (to) => {
+  console.log(to)
+  if (to === "landing") {
+    this.setState({
+      navClassName: "nav-bg-1",
+      itemClassName: "nav-item-1",
+      color: "white",
+      logo: logoOne
+    })
+  }
+  else if (to === "about") {
+    this.setState({
+      navClassName: "nav-bg-3",
+      itemClassName: "nav-item-2",
+      color: "black",
+      logo: logoTwo
+    })
+  }
+ else if (to === "portfolio") {
+    this.setState({
+      navClassName: "nav-bg-2",
+      itemClassName: "nav-item-2",
+      color: "black",
+      logo: logoTwo
+    })
+  }
+  else if (to === "contact") {
+     this.setState({
+      navClassName: "nav-bg-2",
+      itemClassName: "nav-item-2",
+      color: "black",
+      logo: logoTwo
+    })
+  }
+}
 
   connecToServer() {    
     fetch('/');  
@@ -183,12 +223,27 @@ class App extends Component {
 
     return (
       <div>
-        <Landing/>
-        <Portfolio
-           toggle={(num) => this.toggle(num)}
+        <NavBar
+          handleSetActive={this.handleSetActive}
+          navClassName={this.state.navClassName}
+          itemClassName={this.state.itemClassName}
+          style={{ color: this.state.color }}
+          src={this.state.logo}
         />
-        <About/>
-        <Contact/>
+        <Element name="landing" className="landing landing-page">
+          <Landing/>
+        </Element>
+        <Element name="portfolio" className="portfolio">
+          <Portfolio
+            toggle={(num) => this.toggle(num)}
+          />
+        </Element>
+        <Element name="about" className="about about-page">
+          <About/>
+        </Element>
+        <Element name="contact" className="contact contact-page">
+          <Contact/>
+        </Element>
         <div>
           <ModalPage
             show={this.state.modal}

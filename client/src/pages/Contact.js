@@ -75,7 +75,7 @@ class Contact extends Component {
         <div className="contact-page">
           <Container className="contact-container">
            <Row>
-            <Col sm={12}>
+            <Col sm={12} className="mt-3">
               <h4 className="h4-responsive text-center">
                Need a web developer to polish your company's online presence?  Have a design idea you would like to discuss?  
              </h4>

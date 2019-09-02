@@ -8,7 +8,7 @@ import ModalList from "../components/ModalList";
 class ModalPage extends Component {
 
     constructor(props) {
-    super(props);
+      super(props);
     }
 
     render() {
