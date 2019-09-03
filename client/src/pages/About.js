@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { MDBBtn } from "mdbreact";
 import TextBlock from "../components/TextBlock";
 import AboutImage from "../components/AboutImage";
