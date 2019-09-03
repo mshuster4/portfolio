@@ -7,6 +7,7 @@ import Header from "../components/Header"
 import NavButton from "../components/NavButton"
 
 class Landing extends Component {
+
     render() {
         return (
           <div className="landing-page">

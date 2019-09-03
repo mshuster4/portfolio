@@ -33,6 +33,7 @@ class About extends Component {
     render() {
         return (
           <div className="about-page">
+          <ScrollAnimation animateIn="fadeIn">
             <Container className="about-container pt-4 pb-5 pt-md-0 pb-md-0">
                 <Row>
                   <Col sm={12}>
@@ -57,13 +58,20 @@ class About extends Component {
                           >
                             View Resume
                           </MDBBtn>
-                          <MDBBtn
-                            outline={true}
-                            className="about-button ml-0 mr-0"
-                            color="black"
+                           <Link
+                              to="contact" spy={true} 
+                              smooth={true}
+                              offset={20}
+                              duraton={500}
                           >
-                            Say Hello
-                          </MDBBtn>
+                            <MDBBtn
+                                outline={true}
+                                className="about-button ml-0 mr-0"
+                                color="black"
+                            >
+                                Say Hello
+                            </MDBBtn>
+                          </Link>
                         </Col>
                         <Col lg={1}></Col>
                        </Row>
@@ -86,6 +94,7 @@ class About extends Component {
                     </Col>
                 </Row>
             </Container>
+            </ScrollAnimation>
            </div>
         )
     }
