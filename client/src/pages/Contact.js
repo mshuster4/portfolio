@@ -74,8 +74,8 @@ class Contact extends Component {
     render() {
       return(
         <div className="contact-page">
-         <ScrollAnimation animateIn="fadeIn">        
-          <Container className="contact-container">
+         <ScrollAnimation className="contact-container" animateIn="fadeIn">        
+          <Container className="mt-4">
            <Row>
             <Col sm={12}>
               <h4 className="h4-responsive text-center">
