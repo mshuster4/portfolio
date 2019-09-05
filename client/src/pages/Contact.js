@@ -7,24 +7,70 @@ import axios from 'axios';
 import Recaptcha from 'react-google-invisible-recaptcha';
 import * as EmailValidator from 'email-validator';
 
-const key = process.env.REACT_APP_RECAPTCHA_API_KEY
-
 class Contact extends Component {
 
-    constructor(props) {
-    super(props);
+    constructor(props, context) {
+    super(props, context);
     this.state = {
         name: "",
         email: "",
-        message: "",
-        resolved: false 
+        message: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.onRestart = this.onRestart.bind(this);
-    this.onResolved = this.onResolved.bind(this);
   }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+  
+  handleSubmit = e => {
+    e.preventDefault();
+      const name = this.state.name;
+      const email = this.state.email;
+      const message = this.state.message;
+      const isValid = EmailValidator.validate(this.state.email);
+
+      if (isValid === true) {
+        console.log(name, email, message);
+        console.log(isValid)
+          axios({
+              method: "POST", 
+              url:"/send", 
+              data: {
+                  name: name,   
+                  email: email,  
+                  message: message
+              }
+          }).then((response)=>{
+              if (response.data.msg === 'success'){
+                  alert("Message Sent."); 
+                  this.resetForm()
+              }else if(response.data.msg === 'fail'){
+                  alert("Message failed to send.")
+              }
+        })
+      }
+
+     else { 
+          alert("Please enter a valid e-mail address.")
+
+      }
+
+};
+
+ resetForm() {
+   this.setState({
+        name: "",
+        email: "",
+        message: ""
+   })
+ };
+
+
     render() {
       return(
         <div className="contact-page">
@@ -51,11 +97,6 @@ class Contact extends Component {
                     message={this.state.message}
                     onChange={this.handleChange}  
                   />
-                 <Recaptcha
-                    ref={ ref => this.recaptcha = ref }
-                    sitekey= {key}
-                    onResolved={this.onResolved} 
-                  />
               </Col>
             </Row>
           </Container>
@@ -64,60 +105,6 @@ class Contact extends Component {
         </div>
         );
     }
-  handleChange = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-
-  handleSubmit = e => {
-    e.preventDefault();
-      const isValid = EmailValidator.validate(this.state.email);
-
-      if (isValid === true) {
-        this.recaptcha.execute();
-      }
-
-     else { 
-          alert("Please enter a valid e-mail address.");
-          this.recaptcha.reset();
-      }
-
-};
-
-onResolved() {
-  alert('Recaptcha resolved with response: ' + this.recaptcha.getResponse() );
-  this.setState({
-    resolved: true
-  })
-   axios({
-      method: "POST", 
-      url:"/send", 
-      data: {
-          name: this.state.name,   
-          email: this.state.email,  
-          message: this.state.message
-      }
-  }).then((response)=>{
-      if (response.data.msg === 'success'){
-          alert("Message Sent."); 
-          this.resetForm();
-      }else if(response.data.msg === 'fail'){
-          alert("Message failed to send.")
-      }
- })
-}
-
- onRestart() {
-   this.setState({
-        name: "",
-        email: "",
-        message: "",
-        resolved: false
-   })
- };
-
-
 }
 
 export default Contact
