@@ -74,18 +74,21 @@ class Contact extends Component {
     render() {
       return(
         <div className="contact-page">
-         <ScrollAnimation className="contact-container" animateIn="fadeIn">        
-          <Container className="mt-4">
+         <ScrollAnimation className="contact-content" animateIn="fadeIn">        
+          <Container className="contact-container mt-4 mb-4 mt-md-0 mb-md-0">
            <Row>
             <Col sm={12}>
               <h4 className="h4-responsive text-center">
-               Need a web developer to polish your company's online presence?  Have a design idea you would like to discuss?  
+               Need a web developer to polish your company's online presence?   
              </h4>
-              <h4 className="h3-responsive text-center">Drop me a line below!</h4>
+             <h4 className="h4-responsive text-center">
+               Have a design idea you would like to discuss? 
+             </h4>
+              <h4 className="h4-responsive text-center">Drop me a line below!</h4>
             </Col>
            </Row>
             <Row>
-              <Col sm={{span: 8, offset: 2}}>
+              <Col sm={12} md={{span: 8, offset: 2}}>
                   <Form
                     onSubmit={this.handleSubmit}
                     method="POST"

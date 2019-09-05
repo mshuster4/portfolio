@@ -14,7 +14,7 @@ class ModalPage extends Component {
     render() {
 
         return (
-        <Modal show={this.props.show} onHide={this.props.onHide} size="lg"> 
+        <Modal show={this.props.show} onHide={this.props.onHide} size="lg" centered={true}> 
         <Modal.Header closeButton>
             <div className="modal-title">
                 <h1 className="h1-responsive">{this.props.title}</h1>

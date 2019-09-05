@@ -1,9 +1,12 @@
 import React from "react";
 import { MDBInput, MDBBtn, MDBIcon } from "mdbreact";
+import { Row, Col } from "react-bootstrap";
 import "./style.css";
 
 function Form(props) {
     return (
+      <Row>
+       <Col sm={12}>
          <form className="form-group" id="contact-form" onSubmit={props.onSubmit} method={props.method}>
             <MDBInput
               label="Name"
@@ -49,6 +52,8 @@ function Form(props) {
               <MDBBtn type="submit" outline={true} value="submit" className="send-button">Send <MDBIcon icon="paper-plane" /></MDBBtn>
             </div>
           </form>
+        </Col>
+      </Row>
     )
 }
 

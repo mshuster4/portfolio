@@ -62,7 +62,7 @@ class About extends Component {
                            <Link
                               to="contact" spy={true} 
                               smooth={true}
-                              offset={20}
+                              offset={-30}
                               duraton={500}
                           >
                             <MDBBtn

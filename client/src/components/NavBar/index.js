@@ -5,10 +5,10 @@ import "./style.css";
 
 function NavBar(props) {
 
-    return (
+   return (
         <Navbar 
           fixed="top" 
-           className={props.navClassName}
+          className={props.navClassName}
         >
             <Nav className="d-none d-sm-inline-flex">
               <Nav.Item
@@ -88,5 +88,6 @@ function NavBar(props) {
     );
 
 }
+
 
 export default NavBar
