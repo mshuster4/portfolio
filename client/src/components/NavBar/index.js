@@ -20,6 +20,7 @@ function NavBar(props) {
                     className="landing nav-link" 
                     to="landing" 
                     spy={true} 
+                    hashSpy={true}
                     smooth={true}  
                     duraton={500}
                     onSetActive={props.handleSetActive}
@@ -38,10 +39,13 @@ function NavBar(props) {
               >
                     <Link 
                       activeClass="active" 
+                      style={props.style}
                       className="portfolio nav-link" 
                       style={props.style}
-                      to="portfolio" spy={true} 
-                      smooth={true}
+                      to="portfolio" 
+                      spy={true} 
+                      hashSpy={true}
+                      smooth={true} 
                       offset={-30}
                       duraton={500}
                       onSetActive={props.handleSetActive}
@@ -58,6 +62,7 @@ function NavBar(props) {
                       className="about nav-link" 
                       to="about" 
                       spy={true} 
+                      hashSpy={true}
                       smooth={true} 
                       offset={-30}
                       duraton={500}
@@ -75,6 +80,7 @@ function NavBar(props) {
                     className="contact nav-link" 
                     to="contact" 
                     spy={true} 
+                    hashSpy={true}
                     smooth={true} 
                     duraton={500}
                     onSetActive={props.handleSetActive}

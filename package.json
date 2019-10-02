@@ -24,6 +24,7 @@
     "if-env": "^1.0.4",
     "nodemailer": "^6.3.0",
     "path": "^0.12.7",
+    "prop-types": "^15.7.2",
     "react-google-invisible-recaptcha": "^0.2.11",
     "react-google-recaptcha": "^2.0.0-rc.1"
   }

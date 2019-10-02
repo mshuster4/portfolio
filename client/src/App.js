@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Element } from 'react-scroll'
 import LoadSpinner from "./components/LoadSpinner";
 import NavBar from "./components/NavBar";
@@ -79,17 +79,17 @@ class App extends Component {
       logo: logoOne
     })
   }
-  else if (to === "about") {
+  else if (to === "portfolio") {
     this.setState({
-      navClassName: "nav-bg-3",
+      navClassName: "nav-bg-2",
       itemClassName: "nav-item-2",
       color: "black",
       logo: logoTwo
     })
   }
- else if (to === "portfolio") {
+ else if (to === "about") {
     this.setState({
-      navClassName: "nav-bg-2",
+      navClassName: "nav-bg-3",
       itemClassName: "nav-item-2",
       color: "black",
       logo: logoTwo
@@ -110,7 +110,12 @@ class App extends Component {
     .then(response => {
       setTimeout(() => {
         this.setState({
-          loading: false
+          loading: false,
+          navClassName: "nav-bg-1",
+          itemClassName: "nav-item-1",
+          color: "white",
+          logo: logoOne
+
         })
       }, 3000);
       })
@@ -248,7 +253,7 @@ class App extends Component {
         <Element name="landing" className="landing landing-page">
           <Landing/>
         </Element>
-        <Element name="portfolio" className="portfolio">
+        <Element name="portfolio" className="portfolio portfolio-page">
           <Portfolio
             toggle={(num) => this.toggle(num)}
           />
