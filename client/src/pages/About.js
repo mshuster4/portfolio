@@ -35,7 +35,7 @@ class About extends Component {
         return (
           <div className="about-page">
           <ScrollAnimation animateIn="fadeIn">
-            <Container className="about-container pt-4 pb-5 pt-md-0 pb-md-0">
+            <Container className="about-container pt-4 pb-4">
                 <Row>
                   <Col sm={12}>
                     <Card className="mb-3 text-center text-md-left">
@@ -90,7 +90,7 @@ class About extends Component {
                     <Col sm={12} md={6} lg={6}>
                         <SkillsList
                           skills={DesignSkills}
-                          skillsListHeader="Development Skills"
+                          skillsListHeader="Design Skills"
                         />
                     </Col>
                 </Row>

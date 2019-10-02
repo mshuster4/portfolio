@@ -1,45 +1,19 @@
 .footer {
     bottom: 0;
-    background-color: #2e2e2e !important;
+    background-color: black !important;
     color: #fff;
     width: 100%;
     font-family: basic-sans, sans-serif;
-    font-weight: 700;
+    padding: 10px 0;
     font-style: normal;
     text-align: center; 
-    font-size: .5rem
+    font-size: 1rem
 }
 
-.social-buttons {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-.btn .fab {
-    font-size: 2rem;
-}
 
 footer.page-footer .footer-copyright {
     background-color: black;
-    color: white;;
+    color: white;
 }
 
-a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
-    background-color: black !important ;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 !important;
-}
 
-@media only screen and (min-width: 768px) {
-    button.btn.btn-default.Ripple-parent.contact-button {
-        font-size: 1rem;
-    }
-    
-}

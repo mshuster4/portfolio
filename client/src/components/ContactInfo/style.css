@@ -1,0 +1,44 @@
+.social-buttons {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn .fab {
+    font-size: 1.5rem; 
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    button.btn.btn-default.Ripple-parent.contact-button {
+        font-size: 1rem;
+    }
+
+    .btn .fab {
+        font-size: 3rem; 
+    }
+
+    a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
+        height: 80px;
+        width: 80px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 15px;
+    }
+
+    
+}
