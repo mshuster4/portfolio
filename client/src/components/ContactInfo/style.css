@@ -15,9 +15,11 @@ a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
     align-items: center;
 }
 
-.btn .fab {
+.btn .fab, i.fa.fa-envelope-square {
     font-size: 1.5rem; 
 }
+
+
 
 
 
@@ -26,7 +28,7 @@ a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
         font-size: 1rem;
     }
 
-    .btn .fab {
+    .btn .fab, i.fa.fa-envelope-square {
         font-size: 3rem; 
     }
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Container, Row, Col } from "react-bootstrap"
 import PortfolioButton from "../components/PortfolioButton";
+import { Link } from 'react-router-dom'
 import ProjectTitle from "../components/ProjectTitle";
 import PortfolioImage from "../components/PortfolioImage"
 import blockPreview from "../assets/block-party-preview.png";
@@ -36,9 +37,9 @@ class Portfolio extends Component {
                 alt="Block Party Preview"
               >
                 <ProjectTitle>Block Party</ProjectTitle>
-                <PortfolioButton
-                   onClick = {() => this.handleClick(0)}
-                />
+                  <PortfolioButton
+                    onClick = {() => this.handleClick(0)}
+                  />
               </PortfolioImage>
             </Col>
 
