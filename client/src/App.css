@@ -1,32 +1,22 @@
-html, body {
-  height: auto;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 
 #root {
   height: 100%; 
 }
 
-.landing-page {
+#landing {
   background-color: black;
 }
 
-.portfolio-page {
+#portfolio {
   background-color: white;
 }
 
-.about-page {
+#about {
   background-color: rgb(243,243,243);
 }
 
-.contact-page {
+#contact {
   background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .landing-container {
@@ -53,8 +43,10 @@ html, body {
 }
 
 .contact-content {
-  margin-top: auto;
-  margin-bottom: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -118,7 +110,7 @@ a.btn-outline-black.btn.Ripple-parent.modal-link.btn-md {
   }
 
   body.modal-open {
-    overflow: auto;
+    overflow-y: hidden;
     width: 96%;
   }     
 }

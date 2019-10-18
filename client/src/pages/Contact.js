@@ -9,7 +9,7 @@ class Contact extends Component {
 
     render() {
       return(
-        <div className="contact-page">
+        <div id="contact">
          <ScrollAnimation className="contact-content" animateIn="fadeIn">        
           <Container className="contact-container">
            <Row>

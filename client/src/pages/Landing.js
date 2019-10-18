@@ -10,7 +10,7 @@ class Landing extends Component {
 
     render() {
         return (
-          <div className="landing-page">
+          <div id="landing">
            <ScrollAnimation animateIn="fadeIn">
                 <Container className="landing-container">
                     <BackgroundImage>

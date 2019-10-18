@@ -33,7 +33,7 @@ const DevelopmentSkills = [
 class About extends Component {
     render() {
         return (
-          <div className="about-page">
+          <div id="about">
           <ScrollAnimation animateIn="fadeIn">
             <Container className="about-container pt-4 pb-4">
                 <Row>

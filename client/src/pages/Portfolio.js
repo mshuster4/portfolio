@@ -27,7 +27,7 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <div className="portfolio-page">
+      <div id="portfolio">
        <ScrollAnimation animateIn="fadeIn">
         <Container className="portfolio-container mt-4 mb-4 mt-lg-0 mb--0">
           <Row>

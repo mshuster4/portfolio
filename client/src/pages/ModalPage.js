@@ -7,10 +7,7 @@ import ModalList from "../components/ModalList";
 
 class ModalPage extends Component {
 
-    constructor(props) {
-      super(props);
-    }
-
+   
     render() {
 
         return (
@@ -60,7 +57,7 @@ class ModalPage extends Component {
                 View Github <Icon icon={["fab", "github"]} />
             </MDBBtn>
         </MDBModalFooter>
-        </Modal>
+    </Modal>
     );
   }
 }
